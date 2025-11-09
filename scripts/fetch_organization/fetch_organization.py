@@ -81,6 +81,13 @@ def fetch_organization_data(key):
 
 
 def analyze_organization_data(previous_key, current_key):
+    """
+    分析组织数据，对比历史数据和当前数据
+
+    Args:
+        previous_key: 历史数据的时间键（如 "2025-5"）
+        current_key: 当前数据的时间键（如 "2025-8"）
+    """
     # 合并仓库详情
     previous_top_10_organization_path = CONFIG['ORGANIZATION_DATA_DIR'] / \
         previous_key / \
@@ -93,6 +100,7 @@ def analyze_organization_data(previous_key, current_key):
         current_key / CONFIG['REPO_DATA_LIST_FILE_NAME']
 
     # 获取所有需要的数据
+    # 注意：这些函数现在会在文件不存在时返回空列表，而不是抛出异常
     top10_knowledge_sharing_organization_info = get_top10_knowledge_sharing_organization_info(
         previous_top_10_organization_path, current_top_10_organization_path)
     project_info = get_repo_star_more_than_1000(
@@ -111,11 +119,13 @@ def analyze_organization_data(previous_key, current_key):
         'newProjectAddTop3Info': new_project_add_top3_info,
         'top10KnowledgeSharingOrganizationInfo': top10_knowledge_sharing_organization_info
     }
+
     # 写入合并后的数据源文件
     ensure_dir_and_write_file(
         CONFIG['ANALYZED_DATASOURCE_FILE_NAME'],
         json.dumps(datasource, indent=2, ensure_ascii=False)
     )
+    print(f"✅ 已生成分析数据源文件: {CONFIG['ANALYZED_DATASOURCE_FILE_NAME']}")
 
 
 if __name__ == "__main__":
@@ -123,5 +133,32 @@ if __name__ == "__main__":
     month = datetime.now().month
     current_key = f"{year}-{month}"
     previous_key = f"{year}-{month - 3}"
-    # fetch_organization_data(current_key)
-    analyze_organization_data(previous_key, current_key)
+
+    print("=" * 60)
+    print("🚀 开始获取组织数据...")
+    print("=" * 60)
+
+    # 第一步：获取当前月份的组织数据
+    try:
+        print(f"\n📥 正在获取 {current_key} 的组织数据...")
+        fetch_organization_data(current_key)
+        print(f"✅ 成功获取 {current_key} 的组织数据")
+    except Exception as e:
+        print(f"❌ 获取 {current_key} 的组织数据失败: {e}")
+        import traceback
+        traceback.print_exc()
+
+    # 第二步：分析组织数据（对比历史数据）
+    print(f"\n📊 正在分析组织数据（对比 {previous_key} 和 {current_key}）...")
+    try:
+        analyze_organization_data(previous_key, current_key)
+        print(f"✅ 成功分析组织数据")
+    except Exception as e:
+        print(f"⚠️  分析组织数据时出错: {e}")
+        print("   这可能是首次运行或历史数据缺失，但当前数据已成功获取")
+        import traceback
+        traceback.print_exc()
+
+    print("\n" + "=" * 60)
+    print("✅ 组织数据获取完成")
+    print("=" * 60)
