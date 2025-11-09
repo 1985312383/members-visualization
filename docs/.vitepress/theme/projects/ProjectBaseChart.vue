@@ -34,6 +34,12 @@ const getEChartsTheme = () => {
 const generateSeriesList = async (dataSource) => {
     const seriesList = [];
     dataSource.forEach((item) => {
+        // 检查 monthly_total_stars 是否存在且有效
+        if (!item.monthly_total_stars || typeof item.monthly_total_stars !== 'object') {
+            console.warn(`项目 ${item.name} 缺少 monthly_total_stars 数据，跳过该项目`);
+            return;
+        }
+
         const data = Object.keys(item.monthly_total_stars).map((month) => item.monthly_total_stars[month] || 0);
         if (data.some((value, index) => index > 0 && value === 0 && data[index - 1] !== 0)) {
             return
@@ -59,6 +65,25 @@ const generateSeriesList = async (dataSource) => {
 
 const getChartOption = async (dataSource) => {
     const { seriesList } = await generateSeriesList(dataSource)
+
+    // 处理空数据的情况
+    if (!dataSource || dataSource.length === 0 || seriesList.length === 0) {
+        throw new Error('没有可用的数据来显示图表');
+    }
+
+    // 获取第一个有效的数据项的月份数据
+    let xAxisData = [];
+    for (const item of dataSource) {
+        if (item.monthly_total_stars && typeof item.monthly_total_stars === 'object') {
+            xAxisData = Object.keys(item.monthly_total_stars);
+            break;
+        }
+    }
+
+    if (xAxisData.length === 0) {
+        throw new Error('无法获取月份数据');
+    }
+
     const option = {
         tooltip: {
             trigger: 'item'
@@ -66,7 +91,7 @@ const getChartOption = async (dataSource) => {
         legend: {
             type: 'scroll',
             orient: 'horizontal',
-            data: dataSource.map((item) => item.name),
+            data: seriesList.map((item) => item.name),
             left: 0,
             top: 30,
         },
@@ -85,7 +110,7 @@ const getChartOption = async (dataSource) => {
         xAxis: {
             type: 'category',
             boundaryGap: false,
-            data: Object.keys(dataSource[0].monthly_total_stars)
+            data: xAxisData
         },
         yAxis: {
             type: 'value',
@@ -101,11 +126,19 @@ const initChart = async () => {
         loading.value = true
         error.value = null
         chartDataSource.value = await props.loadChartData()
+
+        // 检查数据是否为空
+        if (!chartDataSource.value || chartDataSource.value.length === 0) {
+            error.value = '暂无数据可显示。这可能是首次运行或历史数据缺失。'
+            return;
+        }
+
         const chartOption = await getChartOption(chartDataSource.value)
         chartInstance = echarts.init(chartRef.value, getEChartsTheme())
         chartInstance.setOption(chartOption)
     } catch (err) {
-        error.value = err.message
+        console.error('图表初始化错误:', err);
+        error.value = err.message || '加载数据时出错'
     } finally {
         loading.value = false
     }
@@ -151,10 +184,13 @@ onMounted(async () => {
         </div>
 
         <div v-else-if="error" class="error">
-            <p>加载数据时出错: {{ error }}</p>
+            <p>⚠️ {{ error }}</p>
+            <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">
+                提示：首次运行时可能没有历史数据用于对比。请等待下次数据更新。
+            </p>
         </div>
 
-        <div ref="chartRef" class="chart"></div>
+        <div v-else ref="chartRef" class="chart"></div>
     </div>
 </template>
 

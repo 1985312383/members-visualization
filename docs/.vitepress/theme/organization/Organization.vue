@@ -22,8 +22,14 @@ onMounted(async () => {
         loading.value = true
         error.value = null
         organizationData.value = await loadData()
+
+        // 检查数据是否为空
+        if (!organizationData.value || organizationData.value.length === 0) {
+            error.value = '暂无组织数据可显示。这可能是首次运行或数据缺失。'
+        }
     } catch (err) {
-        error.value = err.message
+        console.error('加载组织数据错误:', err);
+        error.value = err.message || '加载数据时出错'
     } finally {
         loading.value = false
     }

@@ -33,9 +33,15 @@ def join_repo_detail_by_name(repo_list, repo_detail_dir, month_count=12):
             with open(repo_detail_path, 'r', encoding='utf-8') as f:
                 repo_data = json.load(f)
 
-            # 获取月度星星数据
+            # 获取月度星星数据，确保总是返回有效的字典
             monthly_stars = repo_data.get('monthly_stars', {})
             monthly_total_stars = repo_data.get('monthly_total_stars', {})
+
+            # 验证数据类型
+            if not isinstance(monthly_stars, dict):
+                monthly_stars = {}
+            if not isinstance(monthly_total_stars, dict):
+                monthly_total_stars = {}
 
             result.append({
                 'name': filename,
@@ -82,22 +88,28 @@ def get_repo_add_star_more_than_1000(previous_repo_list_path, current_repo_list_
     previous_repo_list_path = Path(previous_repo_list_path)
     current_repo_list_path = Path(current_repo_list_path)
 
-    # 检查历史数据文件是否存在
-    if not previous_repo_list_path.exists():
-        print(f"⚠️  历史仓库列表不存在: {previous_repo_list_path}")
-        print("   首次运行或历史数据缺失，返回空列表")
-        return []
-
+    # 检查当前仓库列表文件是否存在
     if not current_repo_list_path.exists():
         print(f"❌ 当前仓库列表不存在: {current_repo_list_path}")
         return []
 
     try:
-        with open(previous_repo_list_path, 'r', encoding='utf-8') as f:
-            previous_repo_list = json.load(f)
-
         with open(current_repo_list_path, 'r', encoding='utf-8') as f:
             current_repo_list = json.load(f)
+
+        # 如果历史数据不存在，使用当前数据中星星数超过1000的仓库
+        if not previous_repo_list_path.exists():
+            print(f"⚠️  历史仓库列表不存在: {previous_repo_list_path}")
+            print("   首次运行或历史数据缺失，使用当前数据中星星数超过1000的仓库")
+            # 筛选星星数超过1000的仓库
+            more_than_1000_repo_list = [
+                item for item in current_repo_list if item['star_count'] >= 1000]
+            result = join_repo_detail_by_name(more_than_1000_repo_list, repo_detail_dir)
+            print(f"✅ 成功获取 {len(result)} 个星星数超过1000的仓库")
+            return result
+
+        with open(previous_repo_list_path, 'r', encoding='utf-8') as f:
+            previous_repo_list = json.load(f)
 
         # 计算差异并筛选星星数超过1000的仓库
         diff_info = []
@@ -127,22 +139,27 @@ def get_add_star_top5_repo(previous_repo_list_path, current_repo_list_path, repo
     previous_repo_list_path = Path(previous_repo_list_path)
     current_repo_list_path = Path(current_repo_list_path)
 
-    # 检查历史数据文件是否存在
-    if not previous_repo_list_path.exists():
-        print(f"⚠️  历史仓库列表不存在: {previous_repo_list_path}")
-        print("   首次运行或历史数据缺失，返回空列表")
-        return []
-
     if not current_repo_list_path.exists():
         print(f"❌ 当前仓库列表不存在: {current_repo_list_path}")
         return []
 
     try:
-        with open(previous_repo_list_path, 'r', encoding='utf-8') as f:
-            previous_repo_list = json.load(f)
-
         with open(current_repo_list_path, 'r', encoding='utf-8') as f:
             current_repo_list = json.load(f)
+
+        # 如果历史数据不存在，使用当前数据中星星数最多的仓库
+        if not previous_repo_list_path.exists():
+            print(f"⚠️  历史仓库列表不存在: {previous_repo_list_path}")
+            print("   首次运行或历史数据缺失，使用当前数据中星星数最多的仓库")
+            # 按星星数排序并取前5个
+            current_repo_list.sort(key=lambda x: x['star_count'], reverse=True)
+            top5_repo = current_repo_list[:5]
+            result = join_repo_detail_by_name(top5_repo, repo_detail_dir)
+            print(f"✅ 成功获取星星数最多的 {len(result)} 个仓库")
+            return result
+
+        with open(previous_repo_list_path, 'r', encoding='utf-8') as f:
+            previous_repo_list = json.load(f)
 
         # 计算每个仓库的新增星星数
         diff_info = []
@@ -172,22 +189,28 @@ def get_add_star_top3_new_repo(previous_repo_list_path, current_repo_list_path, 
     previous_repo_list_path = Path(previous_repo_list_path)
     current_repo_list_path = Path(current_repo_list_path)
 
-    # 检查历史数据文件是否存在
-    if not previous_repo_list_path.exists():
-        print(f"⚠️  历史仓库列表不存在: {previous_repo_list_path}")
-        print("   首次运行或历史数据缺失，返回空列表")
-        return []
-
     if not current_repo_list_path.exists():
         print(f"❌ 当前仓库列表不存在: {current_repo_list_path}")
         return []
 
     try:
-        with open(previous_repo_list_path, 'r', encoding='utf-8') as f:
-            previous_repo_list = json.load(f)
-
         with open(current_repo_list_path, 'r', encoding='utf-8') as f:
             current_repo_list = json.load(f)
+
+        # 如果历史数据不存在，使用当前数据中星星数最多的3个仓库
+        if not previous_repo_list_path.exists():
+            print(f"⚠️  历史仓库列表不存在: {previous_repo_list_path}")
+            print("   首次运行或历史数据缺失，使用当前数据中星星数最多的仓库")
+            # 按星星数排序
+            current_repo_list.sort(key=lambda x: x['star_count'], reverse=True)
+            # 获取仓库详情并取前3个
+            detail_repo_list = join_repo_detail_by_name(current_repo_list, repo_detail_dir, 4)
+            top3_new_repo = detail_repo_list[:3]
+            print(f"✅ 成功获取 {len(top3_new_repo)} 个仓库")
+            return top3_new_repo
+
+        with open(previous_repo_list_path, 'r', encoding='utf-8') as f:
+            previous_repo_list = json.load(f)
 
         # 筛选星星数大于10的旧仓库
         previous_repo_star_more_than_10 = [

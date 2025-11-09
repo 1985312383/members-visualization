@@ -13,16 +13,10 @@ def get_top10_knowledge_sharing_organization_info(previous_data_path, current_da
         current_data_path: 当前数据文件路径
 
     Returns:
-        包含对比信息的列表，如果历史数据不存在则返回空列表
+        包含对比信息的列表，如果历史数据不存在则返回当前数据
     """
     previous_data_path = Path(previous_data_path)
     current_data_path = Path(current_data_path)
-
-    # 检查历史数据文件是否存在
-    if not previous_data_path.exists():
-        print(f"⚠️  历史数据文件不存在: {previous_data_path}")
-        print("   首次运行或历史数据缺失，跳过对比分析")
-        return []
 
     # 检查当前数据文件是否存在
     if not current_data_path.exists():
@@ -30,11 +24,22 @@ def get_top10_knowledge_sharing_organization_info(previous_data_path, current_da
         return []
 
     try:
-        with open(previous_data_path, 'r', encoding='utf-8') as f:
-            previous_data_list = json.load(f)
-
         with open(current_data_path, 'r', encoding='utf-8') as f:
             current_data_list = json.load(f)
+
+        # 检查历史数据文件是否存在
+        if not previous_data_path.exists():
+            print(f"⚠️  历史数据文件不存在: {previous_data_path}")
+            print("   首次运行或历史数据缺失，返回当前数据")
+            # 为当前数据添加默认的对比字段
+            for item in current_data_list:
+                item['starAdd'] = 0
+                item['rankAdd'] = 0
+            print(f"✅ 成功获取 {len(current_data_list)} 个组织的数据")
+            return current_data_list
+
+        with open(previous_data_path, 'r', encoding='utf-8') as f:
+            previous_data_list = json.load(f)
 
         diff_info = []
         for item in current_data_list:

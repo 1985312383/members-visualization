@@ -61,7 +61,7 @@
   },
   {
     "name": "datawhalechina/hello-agents",
-    "star_count": 3157
+    "star_count": 3158
   },
   {
     "name": "datawhalechina/hugging-llm",
@@ -97,7 +97,7 @@
   },
   {
     "name": "datawhalechina/all-in-rag",
-    "star_count": 1400
+    "star_count": 1401
   },
   {
     "name": "datawhalechina/hands-on-data-analysis",
@@ -544,6 +544,10 @@
     "star_count": 9
   },
   {
+    "name": "datawhalechina/WhaleTools",
+    "star_count": 8
+  },
+  {
     "name": "datawhalechina/hands-on-llm",
     "star_count": 8
   },
@@ -612,8 +616,24 @@
     "star_count": 3
   },
   {
+    "name": "datawhalechina/useful-agent",
+    "star_count": 3
+  },
+  {
     "name": "datawhalechina/easy-robot",
     "star_count": 3
+  },
+  {
+    "name": "datawhalechina/UCL-DeepReinforcementLearning",
+    "star_count": 2
+  },
+  {
+    "name": "datawhalechina/Datawhale_Learning",
+    "star_count": 2
+  },
+  {
+    "name": "datawhalechina/mlia-notes",
+    "star_count": 2
   },
   {
     "name": "datawhalechina/casual-inference",
@@ -626,6 +646,38 @@
   {
     "name": "datawhalechina/easy-dsp",
     "star_count": 2
+  },
+  {
+    "name": "datawhalechina/Datawhale-Navigation",
+    "star_count": 1
+  },
+  {
+    "name": "datawhalechina/leela-notes",
+    "star_count": 1
+  },
+  {
+    "name": "datawhalechina/pms50",
+    "star_count": 1
+  },
+  {
+    "name": "datawhalechina/CN-COVID-19",
+    "star_count": 1
+  },
+  {
+    "name": "datawhalechina/spatio-temporal-papers",
+    "star_count": 1
+  },
+  {
+    "name": "datawhalechina/WhaleToolsAdmin",
+    "star_count": 1
+  },
+  {
+    "name": "datawhalechina/vue-tutorial",
+    "star_count": 1
+  },
+  {
+    "name": "datawhalechina/datawhale-linklearner",
+    "star_count": 1
   },
   {
     "name": "datawhalechina/datawhale-homepage",
@@ -648,6 +700,14 @@
     "star_count": 1
   },
   {
+    "name": "datawhalechina/ai-medical",
+    "star_count": 1
+  },
+  {
+    "name": "datawhalechina/cute-cv",
+    "star_count": 1
+  },
+  {
     "name": "datawhalechina/gemini-pailido-demo",
     "star_count": 1
   },
@@ -664,11 +724,83 @@
     "star_count": 1
   },
   {
+    "name": "datawhalechina/WhaleBook",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/Learning-community",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/BigData_Learning",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/ncov-api",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/CS234-Reinforcement-Learning-Winter-2019-notes",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/cpp-talent",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/dw-bed",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/dw-fed",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/tyroTools",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/dev-babybook",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/DatawhaleApp",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/web-pingshen",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/web-show",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/HandPoseKeyPoints",
+    "star_count": 0
+  },
+  {
     "name": "datawhalechina/.github",
     "star_count": 0
   },
   {
+    "name": "datawhalechina/data-compare",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/datawhale-linklearner-v2",
+    "star_count": 0
+  },
+  {
     "name": "datawhalechina/repo-test",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/kuiper-course",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/whale-insight-ai",
     "star_count": 0
   },
   {
@@ -677,6 +809,18 @@
   },
   {
     "name": "datawhalechina/cs25-notes",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/ai-any-school",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/whale-research",
+    "star_count": 0
+  },
+  {
+    "name": "datawhalechina/torchrl-tutorial",
     "star_count": 0
   },
   {
