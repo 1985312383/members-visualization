@@ -39,7 +39,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests python-dotenv
+          pip install requests python-dotenv PyGithub beautifulsoup4
 
       - name: Install Node dependencies
         run: npm ci
@@ -49,6 +49,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ORG: datawhalechina
+
+      - name: Fetch organization data
+        run: python scripts/fetch_organization/fetch_organization.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check for data changes
         id: check-changes
@@ -67,8 +72,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/public/data/members.json docs/public/data/commits_weekly.json docs/public/avatars/
-          git commit -m "🤖 Auto-update member data and avatars - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git add docs/public/data/members.json docs/public/data/commits_weekly.json docs/public/avatars/ docs/public/data/datawhalechina/
+          git commit -m "🤖 Auto-update member data, organization data and avatars - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           git push
 
       - name: Build with VitePress
@@ -93,10 +98,13 @@ jobs:
         run: |
           echo "## 📊 Daily Data Update Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **Date**: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "- **Tasks Executed**:" >> $GITHUB_STEP_SUMMARY
+          echo "  - ✓ Fetch latest member data" >> $GITHUB_STEP_SUMMARY
+          echo "  - ✓ Fetch organization data" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.check-changes.outputs.changes }}" == "true" ]; then
             echo "- **Status**: ✅ Data updated and site redeployed" >> $GITHUB_STEP_SUMMARY
-            echo "- **Changes**: Member data has been updated" >> $GITHUB_STEP_SUMMARY
+            echo "- **Changes**: Member data and organization data have been updated" >> $GITHUB_STEP_SUMMARY
           else
             echo "- **Status**: ℹ️ No changes detected" >> $GITHUB_STEP_SUMMARY
-            echo "- **Changes**: Member data is up to date" >> $GITHUB_STEP_SUMMARY
+            echo "- **Changes**: All data is up to date" >> $GITHUB_STEP_SUMMARY
           fi
