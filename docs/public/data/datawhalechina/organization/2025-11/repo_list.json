@@ -1,39 +1,39 @@
 [
   {
     "name": "datawhalechina/self-llm",
-    "star_count": 25915
+    "star_count": 25937
   },
   {
     "name": "datawhalechina/pumpkin-book",
-    "star_count": 25418
+    "star_count": 25422
   },
   {
     "name": "datawhalechina/llm-cookbook",
-    "star_count": 22152
+    "star_count": 22166
   },
   {
     "name": "datawhalechina/happy-llm",
-    "star_count": 21341
+    "star_count": 21374
   },
   {
     "name": "datawhalechina/leedl-tutorial",
-    "star_count": 15996
+    "star_count": 15997
   },
   {
     "name": "datawhalechina/easy-rl",
-    "star_count": 12998
+    "star_count": 13010
   },
   {
     "name": "datawhalechina/llm-universe",
-    "star_count": 10714
+    "star_count": 10720
   },
   {
     "name": "datawhalechina/fun-rec",
-    "star_count": 6435
+    "star_count": 6438
   },
   {
     "name": "datawhalechina/so-large-lm",
-    "star_count": 6167
+    "star_count": 6171
   },
   {
     "name": "datawhalechina/joyful-pandas",
@@ -41,27 +41,27 @@
   },
   {
     "name": "datawhalechina/competition-baseline",
-    "star_count": 4682
+    "star_count": 4683
   },
   {
     "name": "datawhalechina/tiny-universe",
-    "star_count": 3998
-  },
-  {
-    "name": "datawhalechina/llms-from-scratch-cn",
-    "star_count": 3727
+    "star_count": 4000
   },
   {
     "name": "datawhalechina/hello-agents",
-    "star_count": 3674
+    "star_count": 3798
+  },
+  {
+    "name": "datawhalechina/llms-from-scratch-cn",
+    "star_count": 3728
   },
   {
     "name": "datawhalechina/thorough-pytorch",
-    "star_count": 3377
+    "star_count": 3381
   },
   {
     "name": "datawhalechina/daily-interview",
-    "star_count": 3292
+    "star_count": 3293
   },
   {
     "name": "datawhalechina/hugging-llm",
@@ -77,11 +77,11 @@
   },
   {
     "name": "datawhalechina/handy-ollama",
-    "star_count": 1968
+    "star_count": 1972
   },
   {
     "name": "datawhalechina/statistical-learning-method-solutions-manual",
-    "star_count": 1962
+    "star_count": 1964
   },
   {
     "name": "datawhalechina/team-learning-data-mining",
@@ -89,7 +89,7 @@
   },
   {
     "name": "datawhalechina/whale-quant",
-    "star_count": 1715
+    "star_count": 1719
   },
   {
     "name": "datawhalechina/key-book",
@@ -97,7 +97,7 @@
   },
   {
     "name": "datawhalechina/all-in-rag",
-    "star_count": 1512
+    "star_count": 1543
   },
   {
     "name": "datawhalechina/hands-on-data-analysis",
@@ -105,11 +105,11 @@
   },
   {
     "name": "datawhalechina/hugging-multi-agent",
-    "star_count": 1321
+    "star_count": 1323
   },
   {
     "name": "datawhalechina/leetcode-notes",
-    "star_count": 987
+    "star_count": 988
   },
   {
     "name": "datawhalechina/dive-into-cv-pytorch",
@@ -121,7 +121,7 @@
   },
   {
     "name": "datawhalechina/wonderful-sql",
-    "star_count": 919
+    "star_count": 918
   },
   {
     "name": "datawhalechina/machine-learning-toy-code",
@@ -137,15 +137,15 @@
   },
   {
     "name": "datawhalechina/unlock-deepseek",
-    "star_count": 687
+    "star_count": 688
   },
   {
     "name": "datawhalechina/handy-multi-agent",
-    "star_count": 606
+    "star_count": 609
   },
   {
     "name": "datawhalechina/torch-rechub",
-    "star_count": 602
+    "star_count": 603
   },
   {
     "name": "datawhalechina/d2l-ai-solutions-manual",
@@ -181,11 +181,11 @@
   },
   {
     "name": "datawhalechina/agent-tutorial",
-    "star_count": 345
+    "star_count": 346
   },
   {
     "name": "datawhalechina/juicy-bigdata",
-    "star_count": 343
+    "star_count": 344
   },
   {
     "name": "datawhalechina/office-automation",
@@ -205,7 +205,7 @@
   },
   {
     "name": "datawhalechina/yolo-master",
-    "star_count": 248
+    "star_count": 250
   },
   {
     "name": "datawhalechina/joyrl",
@@ -229,7 +229,7 @@
   },
   {
     "name": "datawhalechina/ai-hardware-robotics",
-    "star_count": 214
+    "star_count": 215
   },
   {
     "name": "datawhalechina/math-for-ai",
@@ -252,11 +252,11 @@
     "star_count": 183
   },
   {
-    "name": "datawhalechina/smoothly-vslam",
-    "star_count": 178
+    "name": "datawhalechina/coze-ai-assistant",
+    "star_count": 179
   },
   {
-    "name": "datawhalechina/coze-ai-assistant",
+    "name": "datawhalechina/smoothly-vslam",
     "star_count": 178
   },
   {
@@ -269,7 +269,7 @@
   },
   {
     "name": "datawhalechina/self-dify",
-    "star_count": 160
+    "star_count": 161
   },
   {
     "name": "datawhalechina/faster-git",
@@ -316,12 +316,12 @@
     "star_count": 103
   },
   {
-    "name": "datawhalechina/unlock-hf",
-    "star_count": 96
+    "name": "datawhalechina/easy-vectordb",
+    "star_count": 97
   },
   {
-    "name": "datawhalechina/easy-vectordb",
-    "star_count": 95
+    "name": "datawhalechina/unlock-hf",
+    "star_count": 96
   },
   {
     "name": "datawhalechina/hands-dirty-nlp",
@@ -329,7 +329,7 @@
   },
   {
     "name": "datawhalechina/ml-for-security",
-    "star_count": 89
+    "star_count": 90
   },
   {
     "name": "datawhalechina/ai-edu-for-kids",
@@ -353,7 +353,7 @@
   },
   {
     "name": "datawhalechina/handy-n8n",
-    "star_count": 81
+    "star_count": 82
   },
   {
     "name": "datawhalechina/llm-research",
@@ -380,16 +380,16 @@
     "star_count": 68
   },
   {
+    "name": "datawhalechina/agentic-ai",
+    "star_count": 67
+  },
+  {
     "name": "datawhalechina/wow-plotly",
     "star_count": 66
   },
   {
     "name": "datawhalechina/openmmlab-tutorial",
     "star_count": 66
-  },
-  {
-    "name": "datawhalechina/agentic-ai",
-    "star_count": 59
   },
   {
     "name": "datawhalechina/go-talent",
@@ -413,7 +413,7 @@
   },
   {
     "name": "datawhalechina/mcp-lite-dev",
-    "star_count": 38
+    "star_count": 39
   },
   {
     "name": "datawhalechina/hugging-audio",
@@ -468,12 +468,12 @@
     "star_count": 25
   },
   {
-    "name": "datawhalechina/resonant-soul",
+    "name": "datawhalechina/repo-template",
     "star_count": 25
   },
   {
-    "name": "datawhalechina/repo-template",
-    "star_count": 24
+    "name": "datawhalechina/resonant-soul",
+    "star_count": 25
   },
   {
     "name": "datawhalechina/sweetalk-data-structure",
