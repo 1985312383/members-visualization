@@ -1015,43 +1015,43 @@
     "rank": 203
   },
   {
+    "name": "localstack",
+    "star_count": 66874,
+    "rank": 204
+  },
+  {
     "name": "oracle",
     "star_count": 66605,
-    "rank": 204
+    "rank": 205
   },
   {
     "name": "dmlc",
     "star_count": 65988,
-    "rank": 205
+    "rank": 206
   },
   {
     "name": "rust-unofficial",
     "star_count": 65833,
-    "rank": 206
+    "rank": 207
   },
   {
     "name": "gatsbyjs",
     "star_count": 65569,
-    "rank": 207
+    "rank": 208
   },
   {
     "name": "KhronosGroup",
     "star_count": 65531,
-    "rank": 208
+    "rank": 209
   },
   {
     "name": "dcloudio",
     "star_count": 65223,
-    "rank": 209
+    "rank": 210
   },
   {
     "name": "OpnTec",
     "star_count": 65064,
-    "rank": 210
-  },
-  {
-    "name": "localstack",
-    "star_count": 64942,
     "rank": 211
   },
   {
@@ -2995,13 +2995,13 @@
     "rank": 599
   },
   {
-    "name": "stanford-oval",
+    "name": "opendilab",
     "star_count": 26772,
     "rank": 600
   },
   {
-    "name": "opendilab",
-    "star_count": 26771,
+    "name": "stanford-oval",
+    "star_count": 26772,
     "rank": 601
   },
   {
