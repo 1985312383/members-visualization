@@ -1,39 +1,39 @@
 [
   {
     "name": "datawhalechina/self-llm",
-    "star_count": 26055
+    "star_count": 26073
   },
   {
     "name": "datawhalechina/pumpkin-book",
-    "star_count": 25429
+    "star_count": 25430
   },
   {
     "name": "datawhalechina/llm-cookbook",
-    "star_count": 22219
+    "star_count": 22232
   },
   {
     "name": "datawhalechina/happy-llm",
-    "star_count": 21595
+    "star_count": 21647
   },
   {
     "name": "datawhalechina/leedl-tutorial",
-    "star_count": 16026
+    "star_count": 16031
   },
   {
     "name": "datawhalechina/easy-rl",
-    "star_count": 13060
+    "star_count": 13071
   },
   {
     "name": "datawhalechina/llm-universe",
-    "star_count": 10779
+    "star_count": 10790
   },
   {
     "name": "datawhalechina/fun-rec",
-    "star_count": 6460
+    "star_count": 6464
   },
   {
     "name": "datawhalechina/so-large-lm",
-    "star_count": 6192
+    "star_count": 6196
   },
   {
     "name": "datawhalechina/joyful-pandas",
@@ -41,27 +41,27 @@
   },
   {
     "name": "datawhalechina/competition-baseline",
-    "star_count": 4689
+    "star_count": 4688
   },
   {
     "name": "datawhalechina/hello-agents",
-    "star_count": 4303
+    "star_count": 4397
   },
   {
     "name": "datawhalechina/tiny-universe",
-    "star_count": 4023
+    "star_count": 4030
   },
   {
     "name": "datawhalechina/llms-from-scratch-cn",
-    "star_count": 3737
+    "star_count": 3740
   },
   {
     "name": "datawhalechina/thorough-pytorch",
-    "star_count": 3396
+    "star_count": 3399
   },
   {
     "name": "datawhalechina/daily-interview",
-    "star_count": 3303
+    "star_count": 3307
   },
   {
     "name": "datawhalechina/hugging-llm",
@@ -73,27 +73,27 @@
   },
   {
     "name": "datawhalechina/team-learning",
-    "star_count": 2311
+    "star_count": 2310
   },
   {
     "name": "datawhalechina/handy-ollama",
-    "star_count": 1976
+    "star_count": 1977
   },
   {
     "name": "datawhalechina/statistical-learning-method-solutions-manual",
-    "star_count": 1969
+    "star_count": 1968
   },
   {
     "name": "datawhalechina/team-learning-data-mining",
-    "star_count": 1781
+    "star_count": 1782
   },
   {
     "name": "datawhalechina/whale-quant",
-    "star_count": 1731
+    "star_count": 1733
   },
   {
     "name": "datawhalechina/all-in-rag",
-    "star_count": 1671
+    "star_count": 1692
   },
   {
     "name": "datawhalechina/key-book",
@@ -101,11 +101,11 @@
   },
   {
     "name": "datawhalechina/hands-on-data-analysis",
-    "star_count": 1358
+    "star_count": 1357
   },
   {
     "name": "datawhalechina/hugging-multi-agent",
-    "star_count": 1326
+    "star_count": 1327
   },
   {
     "name": "datawhalechina/leetcode-notes",
@@ -125,11 +125,11 @@
   },
   {
     "name": "datawhalechina/machine-learning-toy-code",
-    "star_count": 916
+    "star_count": 913
   },
   {
     "name": "datawhalechina/team-learning-program",
-    "star_count": 840
+    "star_count": 838
   },
   {
     "name": "datawhalechina/intro-mathmodel",
@@ -145,7 +145,7 @@
   },
   {
     "name": "datawhalechina/torch-rechub",
-    "star_count": 609
+    "star_count": 611
   },
   {
     "name": "datawhalechina/d2l-ai-solutions-manual",
@@ -153,7 +153,7 @@
   },
   {
     "name": "datawhalechina/fantastic-matplotlib",
-    "star_count": 518
+    "star_count": 516
   },
   {
     "name": "datawhalechina/powerful-numpy",
@@ -161,7 +161,7 @@
   },
   {
     "name": "datawhalechina/vced",
-    "star_count": 379
+    "star_count": 380
   },
   {
     "name": "datawhalechina/team-learning-cv",
@@ -221,11 +221,11 @@
   },
   {
     "name": "datawhalechina/wow-rag",
-    "star_count": 224
+    "star_count": 225
   },
   {
     "name": "datawhalechina/ai-hardware-robotics",
-    "star_count": 223
+    "star_count": 224
   },
   {
     "name": "datawhalechina/wow-fullstack",
@@ -272,11 +272,11 @@
     "star_count": 170
   },
   {
-    "name": "datawhalechina/faster-git",
-    "star_count": 158
+    "name": "datawhalechina/open-ai-general-course",
+    "star_count": 159
   },
   {
-    "name": "datawhalechina/open-ai-general-course",
+    "name": "datawhalechina/faster-git",
     "star_count": 158
   },
   {
@@ -289,7 +289,7 @@
   },
   {
     "name": "datawhalechina/what-is-vs",
-    "star_count": 136
+    "star_count": 137
   },
   {
     "name": "datawhalechina/unusual-deep-learning",
@@ -301,7 +301,7 @@
   },
   {
     "name": "datawhalechina/post-training-of-llms",
-    "star_count": 116
+    "star_count": 117
   },
   {
     "name": "datawhalechina/llmbook",
@@ -309,7 +309,7 @@
   },
   {
     "name": "datawhalechina/llm-preview",
-    "star_count": 109
+    "star_count": 110
   },
   {
     "name": "datawhalechina/sora-tutorial",
@@ -317,7 +317,7 @@
   },
   {
     "name": "datawhalechina/easy-vectordb",
-    "star_count": 101
+    "star_count": 102
   },
   {
     "name": "datawhalechina/unlock-hf",
@@ -353,7 +353,7 @@
   },
   {
     "name": "datawhalechina/handy-n8n",
-    "star_count": 82
+    "star_count": 81
   },
   {
     "name": "datawhalechina/llm-research",
@@ -361,7 +361,7 @@
   },
   {
     "name": "datawhalechina/agentic-ai",
-    "star_count": 78
+    "star_count": 79
   },
   {
     "name": "datawhalechina/hml-solutions",
@@ -429,7 +429,7 @@
   },
   {
     "name": "datawhalechina/base-nlp",
-    "star_count": 35
+    "star_count": 36
   },
   {
     "name": "datawhalechina/design-with-ai",
@@ -453,7 +453,7 @@
   },
   {
     "name": "datawhalechina/video-devour",
-    "star_count": 29
+    "star_count": 30
   },
   {
     "name": "datawhalechina/whale-web",
@@ -488,15 +488,15 @@
     "star_count": 22
   },
   {
+    "name": "datawhalechina/members-visualization",
+    "star_count": 22
+  },
+  {
     "name": "datawhalechina/leeml-notes",
     "star_count": 21
   },
   {
     "name": "datawhalechina/cstart",
-    "star_count": 21
-  },
-  {
-    "name": "datawhalechina/members-visualization",
     "star_count": 21
   },
   {
